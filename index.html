@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="photoCarousel" class="photo-carousel">
+        <img class="carousel-image" src="2.jpg" alt="Cumpleaños">
+    </div>
+    
+        <h1>¡Feliz Cumpleaños, Primo! 🎉</h1>
+        <p>Presiona las velas para soplarlas.</p>
+        
+        <button id="showCake">🎂 Mostrar Pastel 🎂</button>
+        
+        <div id="cakeContainer" class="hidden">
+            <h2>¡Haz un Deseo! 🎂</h2>
+            <div class="cake">
+                <div class="candles">
+                    <!-- Genera 22 velas -->
+                    <script>
+                        for (let i = 1; i <= 22; i++) {
+                            document.write(`<div class="candle" onclick="extinguishCandle(this)">🔥</div>`);
+                        }
+                    </script>
+                </div>
+                <div class="cakeBase">🎂</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fireworks" class="hidden"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
